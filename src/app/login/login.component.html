@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="col-4"></div>
+	<div class="col">
+		<h4 class="text-center">Login</h4>
+		<img src="assets/lock.png" alt="lock icon" class="text-center img-responsive pic">
+		<form #f="ngForm" (ngSubmit)="login(f)">
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input ngModel name="email" type="email" id="email" class="form-control" placeholder="Enter Email" #requried="ngModel" requried>
+				<p class="alert alert-danger" >
+					Please fill in this filed.
+				</p>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input ngModel name="password" type="text" id="password" class="form-control"  placeholder="Enter Password">
+
+			</div>
+			<button class="btn btn-primary">Login</button>
+		</form>
+		<hr>
+		<a routerLink="/register" class="primary">Dont have a account?</a>
+	</div>
+	<div class="col-4"></div>
+</div>
